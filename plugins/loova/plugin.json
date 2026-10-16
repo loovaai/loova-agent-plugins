@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "loova",
+  "version": "2.1.0",
+  "description": "Product image and video creation with Loova MCP.",
+  "author": {
+    "name": "Loova"
+  },
+  "homepage": "https://loova.ai",
+  "repository": "https://github.com/loovaai/loova-agent-plugins"
+}

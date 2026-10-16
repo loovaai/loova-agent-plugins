@@ -1,0 +1,4 @@
+interface:
+  display_name: "UGC Ad Creator"
+  short_description: "Create presenter-led product ads and demonstrations."
+  default_prompt: "Use $loova-ugc-ad-creator. Create a UGC-style sunscreen ad with a woman presenting the product by the sea. Use only the supplied product claims."

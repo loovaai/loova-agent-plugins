@@ -1,0 +1,17 @@
+{
+  "name": "loova-agent-plugins",
+  "metadata": {
+    "description": "Loova creative skills and production MCP integration"
+  },
+  "owner": {
+    "name": "Loova"
+  },
+  "plugins": [
+    {
+      "name": "loova",
+      "source": "./plugins/loova",
+      "version": "2.1.0",
+      "description": "Product image and video creation with Loova MCP."
+    }
+  ]
+}

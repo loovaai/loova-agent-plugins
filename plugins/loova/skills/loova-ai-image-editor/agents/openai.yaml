@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Image Editor"
+  short_description: "Edit images while preserving the intended subject."
+  default_prompt: "Use $loova-ai-image-editor. Give this bottle photo a warm beige studio background. Keep the bottle, logo, and composition unchanged."

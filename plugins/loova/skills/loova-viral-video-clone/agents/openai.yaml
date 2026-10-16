@@ -1,0 +1,4 @@
+interface:
+  display_name: "Viral Video Clone"
+  short_description: "Recreate reference ad structures for your product."
+  default_prompt: "Use $loova-viral-video-clone. Make a version of this ad for my sneaker. Follow the reference pacing and shot structure, and use my product image."

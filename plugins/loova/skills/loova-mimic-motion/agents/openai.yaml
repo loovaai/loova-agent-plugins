@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mimic Motion"
+  short_description: "Transfer reference movement to a target character."
+  default_prompt: "Use $loova-mimic-motion. Make my robot perform the wave and turn from this reference video in a white studio, with the full body visible."

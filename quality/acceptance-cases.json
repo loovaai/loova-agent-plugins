@@ -1,0 +1,206 @@
+{
+  "status": "not-executed-with-media-tools",
+  "purpose": "连接工具后的行为验收，不是效果评分或已经执行的生成测试",
+  "cases": [
+    {
+      "id": "studio-product",
+      "skill": "loova-product-photoshoot",
+      "request": "用保温杯图拍一张干净棚拍，不改 Logo。",
+      "acceptance": [
+        "棚拍关系合理",
+        "产品身份约束明确",
+        "不制作详情套图"
+      ]
+    },
+    {
+      "id": "lifestyle-product",
+      "skill": "loova-product-photoshoot",
+      "request": "在厨房做一张咖啡机生活场景宣传图。",
+      "acceptance": [
+        "实际承托关系",
+        "参考角色分工",
+        "不凭空增加操作功能"
+      ]
+    },
+    {
+      "id": "listing-four",
+      "skill": "loova-product-listing-images",
+      "request": "主图、两张卖点图和一张规格图，共四张。",
+      "acceptance": [
+        "保持四张数量",
+        "各图信息分工",
+        "不扩展批次"
+      ]
+    },
+    {
+      "id": "missing-spec",
+      "skill": "loova-product-listing-images",
+      "request": "没有给尺寸资料，但想做尺寸图。",
+      "acceptance": [
+        "不编数值",
+        "指出关键资料缺口",
+        "可继续完成不依赖尺寸的模块"
+      ]
+    },
+    {
+      "id": "local-edit",
+      "skill": "loova-ai-image-editor",
+      "request": "移除瓶子旁边的灰尘，其他保持。",
+      "acceptance": [
+        "局部范围",
+        "保持原主体",
+        "不全图换风格"
+      ]
+    },
+    {
+      "id": "restyle-edit",
+      "skill": "loova-ai-image-editor",
+      "request": "把原图改成水彩，保留人物与构图。",
+      "acceptance": [
+        "全局风格转换",
+        "身份与构图约束",
+        "不复制风格图人物"
+      ]
+    },
+    {
+      "id": "cover-exact-text",
+      "skill": "loova-thumbnail-cover-maker",
+      "request": "做封面，文字原样写桌面终于清爽了。",
+      "acceptance": [
+        "核对原样文字",
+        "小尺寸可读性",
+        "不编视频结果"
+      ]
+    },
+    {
+      "id": "cover-plan-only",
+      "skill": "loova-thumbnail-cover-maker",
+      "request": "只给两个封面构图方案，不生成。",
+      "acceptance": [
+        "只交文字方案",
+        "无生成收费调用",
+        "两个明确构图区别"
+      ]
+    },
+    {
+      "id": "resize-two",
+      "skill": "loova-ad-resizer",
+      "request": "1200方图适配1080×1920与1920×1080，保留全部产品。",
+      "acceptance": [
+        "各目标独立布局",
+        "等比缩放",
+        "核对实际像素"
+      ]
+    },
+    {
+      "id": "resize-protected",
+      "skill": "loova-ad-resizer",
+      "request": "四角都有必要文字，改成竖版。",
+      "acceptance": [
+        "不默认中心裁切",
+        "考虑留边或重排",
+        "说明扁平图文字处理限制"
+      ]
+    },
+    {
+      "id": "remake-new-product",
+      "skill": "loova-viral-video-clone",
+      "request": "参考咖啡广告节奏，为台灯改编。",
+      "acceptance": [
+        "观察与推断区分",
+        "将动作适配台灯",
+        "不照搬倒液动作"
+      ]
+    },
+    {
+      "id": "remake-inaccessible",
+      "skill": "loova-viral-video-clone",
+      "request": "参考链接无法打开。",
+      "acceptance": [
+        "不虚构时间码",
+        "说明参考未查看",
+        "基于已有描述推进可做部分"
+      ]
+    },
+    {
+      "id": "single-image-video",
+      "skill": "loova-product-video-maker",
+      "request": "正面香水图做8秒推进。",
+      "acceptance": [
+        "有限相机运动",
+        "不生成未知背面",
+        "不凭空开盖喷雾"
+      ]
+    },
+    {
+      "id": "silent-product-video",
+      "skill": "loova-product-video-maker",
+      "request": "三张产品图做15秒无声展示。",
+      "acceptance": [
+        "统一SKU",
+        "多镜头接续",
+        "保留无声要求"
+      ]
+    },
+    {
+      "id": "ugc-no-testimony",
+      "skill": "loova-ugc-ad-creator",
+      "request": "做人物广告，没有真实体验资料。",
+      "acceptance": [
+        "讲解或模拟演示",
+        "不编30天使用经历",
+        "主张有依据"
+      ]
+    },
+    {
+      "id": "ugc-locked-script",
+      "skill": "loova-ugc-ad-creator",
+      "request": "20秒片，给定长台词且不允许删改。",
+      "acceptance": [
+        "真实口播时长检查",
+        "保留锁定台词",
+        "说明冲突而非静默删字"
+      ]
+    },
+    {
+      "id": "swap-left",
+      "skill": "loova-character-swap",
+      "request": "只换舞蹈片左边角色，保留背景与音乐。",
+      "acceptance": [
+        "目标唯一",
+        "原片时间动作保留",
+        "原音同步"
+      ]
+    },
+    {
+      "id": "swap-face-only",
+      "skill": "loova-character-swap",
+      "request": "只换脸，头发衣服身体保持。",
+      "acceptance": [
+        "范围不扩大到全身",
+        "保护头发和服装",
+        "检查转身及遮挡恢复"
+      ]
+    },
+    {
+      "id": "motion-new-scene",
+      "skill": "loova-mimic-motion",
+      "request": "机器人模仿动作，在白色棚内全身拍摄。",
+      "acceptance": [
+        "动作与身份分离",
+        "不带入原场景",
+        "检查关键阶段和支撑"
+      ]
+    },
+    {
+      "id": "motion-camera",
+      "skill": "loova-mimic-motion",
+      "request": "动作参考中相机向右摇，模仿角色挥手。",
+      "acceptance": [
+        "分离相机与身体位移",
+        "左右相位与节奏",
+        "不将摇镜当角色移动"
+      ]
+    }
+  ]
+}

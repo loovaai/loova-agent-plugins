@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Photoshoot"
+  short_description: "Create studio and lifestyle product photos."
+  default_prompt: "Use $loova-product-photoshoot. Create a lifestyle photo of this bottle on a lakeside camping table at golden hour. Keep the product and logo unchanged."

@@ -1,0 +1,20 @@
+{
+  "name": "loova-agent-plugins",
+  "interface": {
+    "displayName": "Loova"
+  },
+  "plugins": [
+    {
+      "name": "loova",
+      "source": {
+        "source": "local",
+        "path": "./plugins/loova"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Creativity"
+    }
+  ]
+}

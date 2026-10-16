@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Video Maker"
+  short_description: "Turn product images into showcase videos."
+  default_prompt: "Use $loova-product-video-maker. Turn this sneaker photo into a cinematic product video, starting with detail close-ups and ending with a full reveal."

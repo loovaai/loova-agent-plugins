@@ -1,0 +1,4 @@
+interface:
+  display_name: "Character Swap"
+  short_description: "Replace video characters while retaining the scene."
+  default_prompt: "Use $loova-character-swap. Replace only the person on the left with my reference character. Keep the original scene, movement, and music."

@@ -1,0 +1,187 @@
+{
+  "name": "Loova Creative Skills",
+  "version": "2.1.0",
+  "language": "en",
+  "skill_count": 10,
+  "image_skill_count": 5,
+  "video_skill_count": 5,
+  "bundle": "loova-creative-skills-2.1.0.zip",
+  "skills": [
+    {
+      "name": "loova-product-photoshoot",
+      "display_name": "Product Photoshoot",
+      "description": "Create studio, lifestyle, or campaign images for a specific product using Loova. Use for new product photography from product references or a concept brief; use an editing or listing workflow for local retouching or a product listing set.",
+      "category": "image-creation",
+      "scenario": "Product photography and brand campaigns",
+      "path": "plugins/loova/skills/loova-product-photoshoot/SKILL.md",
+      "archive": "downloads/loova-product-photoshoot-2.1.0.zip",
+      "inputs": [
+        "Product image or a concept description",
+        "Intended use and optional aspect ratio or output count"
+      ],
+      "outputs": [
+        "Product images or a requested photography plan"
+      ],
+      "example": "Create a lifestyle photo of this bottle on a lakeside camping table at golden hour. Keep the product and logo unchanged."
+    },
+    {
+      "name": "loova-product-listing-images",
+      "display_name": "Product Listing Images",
+      "description": "Create coordinated product listing images with Loova, including hero, feature, detail, lifestyle, and specification images. Use for ecommerce image sets with consistent SKU facts; not for video or a small edit to a single image.",
+      "category": "image-creation",
+      "scenario": "Ecommerce listings and product detail pages",
+      "path": "plugins/loova/skills/loova-product-listing-images/SKILL.md",
+      "archive": "downloads/loova-product-listing-images-2.1.0.zip",
+      "inputs": [
+        "Product images, SKU details, and verified product facts",
+        "Listing destination and requested modules or count"
+      ],
+      "outputs": [
+        "A coordinated listing image set",
+        "An image order and any unverified facts"
+      ],
+      "example": "Create a main image, two feature images, and one specification image for this speaker using the attached product facts."
+    },
+    {
+      "name": "loova-ai-image-editor",
+      "display_name": "AI Image Editor",
+      "description": "Edit a supplied image with Loova, changing specified objects, backgrounds, details, or visual style while preserving the agreed subject and composition. Use for image edits; not for creating an unrelated image or only resizing a layout.",
+      "category": "image-creation",
+      "scenario": "Image retouching, background replacement, and restyling",
+      "path": "plugins/loova/skills/loova-ai-image-editor/SKILL.md",
+      "archive": "downloads/loova-ai-image-editor-2.1.0.zip",
+      "inputs": [
+        "An accessible source image",
+        "Requested edits and protected content"
+      ],
+      "outputs": [
+        "An edited image and a concise change summary"
+      ],
+      "example": "Give this bottle photo a warm beige studio background. Keep the bottle, logo, and composition unchanged."
+    },
+    {
+      "name": "loova-thumbnail-cover-maker",
+      "display_name": "Thumbnail & Cover Maker",
+      "description": "Create or revise video thumbnails and social covers with Loova, using a clear subject, accurate copy, and small-screen readability. Use for cover images or cover concepts; not for generating the video itself.",
+      "category": "image-creation",
+      "scenario": "Video thumbnails and social publishing",
+      "path": "plugins/loova/skills/loova-thumbnail-cover-maker/SKILL.md",
+      "archive": "downloads/loova-thumbnail-cover-maker-2.1.0.zip",
+      "inputs": [
+        "The real content or topic",
+        "Placement, exact copy, and optional identity or brand references"
+      ],
+      "outputs": [
+        "Requested cover images or cover concepts"
+      ],
+      "example": "Make a bold cover for my sneaker video. Use this shoe and the headline \"YOUR NEXT MOVE\"."
+    },
+    {
+      "name": "loova-ad-resizer",
+      "display_name": "Ad Resizer",
+      "description": "Adapt an existing product or ad image to requested dimensions and aspect ratios with Loova-compatible editing or deterministic resizing. Preserve product proportions, copy, and required content through containment, cropping, extension, or reflow.",
+      "category": "image-creation",
+      "scenario": "Ad placement and multichannel creative adaptation",
+      "path": "plugins/loova/skills/loova-ad-resizer/SKILL.md",
+      "archive": "downloads/loova-ad-resizer-2.1.0.zip",
+      "inputs": [
+        "An existing creative",
+        "Target dimensions or ratios and protected content"
+      ],
+      "outputs": [
+        "One file per requested target",
+        "Actual dimensions and adaptation method"
+      ],
+      "example": "Adapt this square ad to 1080 x 1920 and 1920 x 1080. Preserve the full product, logo, and required copy."
+    },
+    {
+      "name": "loova-viral-video-clone",
+      "display_name": "Viral Video Clone",
+      "description": "Adapt a reference video into a new product video with Loova, preserving the requested pacing and shot structure while using the user's product. Use for reference-led ad recreation; not for replacing only a person in the original footage.",
+      "category": "video-creation",
+      "scenario": "Reference-led product ads and campaign adaptation",
+      "path": "plugins/loova/skills/loova-viral-video-clone/SKILL.md",
+      "archive": "downloads/loova-viral-video-clone-2.1.0.zip",
+      "inputs": [
+        "An accessible reference video",
+        "Target product references and facts",
+        "Desired duration and reference scope"
+      ],
+      "outputs": [
+        "A requested adaptation plan or completed video"
+      ],
+      "example": "Make a version of this ad for my sneaker. Follow the reference pacing and shot structure, and use my product image."
+    },
+    {
+      "name": "loova-product-video-maker",
+      "display_name": "Product Video Maker",
+      "description": "Turn product images into showcase videos with Loova, coordinating camera motion, product motion, and shot continuity. Use for image-to-product-video work or storyboards; not for presenter ads, reference-ad recreation, or character motion transfer.",
+      "category": "video-creation",
+      "scenario": "Product showcases and launch videos",
+      "path": "plugins/loova/skills/loova-product-video-maker/SKILL.md",
+      "archive": "downloads/loova-product-video-maker-2.1.0.zip",
+      "inputs": [
+        "Product images and available angles",
+        "Showcase goal and optional duration, format, and audio requirements"
+      ],
+      "outputs": [
+        "A requested showcase video or shot plan"
+      ],
+      "example": "Turn this sneaker photo into a cinematic product video, starting with detail close-ups and ending with a full reveal."
+    },
+    {
+      "name": "loova-ugc-ad-creator",
+      "display_name": "UGC Ad Creator",
+      "description": "Create presenter-led product ads with Loova, coordinating a natural script, product demonstration, speech, and supporting shots. Use for UGC-style ads and their scripts; not for a silent product-only showcase or identity replacement.",
+      "category": "video-creation",
+      "scenario": "Presenter ads, product explanations, and demonstrations",
+      "path": "plugins/loova/skills/loova-ugc-ad-creator/SKILL.md",
+      "archive": "downloads/loova-ugc-ad-creator-2.1.0.zip",
+      "inputs": [
+        "Product facts, audience, and supported claims",
+        "Presenter reference or brief",
+        "Language, duration, script, and CTA requirements"
+      ],
+      "outputs": [
+        "A requested script, shot plan, or finished UGC-style ad"
+      ],
+      "example": "Create a UGC-style sunscreen ad with a woman presenting the product by the sea. Use only the supplied product claims."
+    },
+    {
+      "name": "loova-character-swap",
+      "display_name": "Character Swap",
+      "description": "Replace a specified person or character in source footage using Loova video editing, retaining the agreed scene, motion, camera, timing, and audio. Use for identity replacement in an existing video; not for performing reference motion in a new scene.",
+      "category": "video-creation",
+      "scenario": "Character replacement and video adaptation",
+      "path": "plugins/loova/skills/loova-character-swap/SKILL.md",
+      "archive": "downloads/loova-character-swap-2.1.0.zip",
+      "inputs": [
+        "Accessible source footage",
+        "Target character or identity reference",
+        "The person and replacement scope"
+      ],
+      "outputs": [
+        "A replacement video and any preservation differences"
+      ],
+      "example": "Replace only the person on the left with my reference character. Keep the original scene, movement, and music."
+    },
+    {
+      "name": "loova-mimic-motion",
+      "display_name": "Mimic Motion",
+      "description": "Make a target character perform movement from a reference video with Loova, separating identity, body motion, camera, and environment. Use for reference-motion transfer or motion plans; use source-video identity editing when the original scene must remain unchanged.",
+      "category": "video-creation",
+      "scenario": "Character animation and reference-motion transfer",
+      "path": "plugins/loova/skills/loova-mimic-motion/SKILL.md",
+      "archive": "downloads/loova-mimic-motion-2.1.0.zip",
+      "inputs": [
+        "Target character reference",
+        "An accessible motion reference video",
+        "Target scene and optional timing requirements"
+      ],
+      "outputs": [
+        "A requested motion video or motion beat plan"
+      ],
+      "example": "Make my robot perform the wave and turn from this reference video in a white studio, with the full body visible."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Listing Images"
+  short_description: "Build consistent ecommerce product image sets."
+  default_prompt: "Use $loova-product-listing-images. Create a main image, two feature images, and one specification image for this speaker using the attached product facts."

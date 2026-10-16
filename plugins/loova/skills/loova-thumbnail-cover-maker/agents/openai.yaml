@@ -1,0 +1,4 @@
+interface:
+  display_name: "Thumbnail & Cover Maker"
+  short_description: "Create clear, readable thumbnails and social covers."
+  default_prompt: "Use $loova-thumbnail-cover-maker. Make a bold cover for my sneaker video. Use this shoe and the headline \"YOUR NEXT MOVE\"."

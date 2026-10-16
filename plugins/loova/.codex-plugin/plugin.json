@@ -1,0 +1,21 @@
+{
+  "name": "loova",
+  "version": "2.1.0",
+  "description": "Product image and video creation with Loova MCP.",
+  "author": {
+    "name": "Loova"
+  },
+  "homepage": "https://loova.ai",
+  "repository": "https://github.com/loovaai/loova-agent-plugins",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Loova",
+    "shortDescription": "Product images and videos with Loova",
+    "developerName": "Loova",
+    "category": "Creativity",
+    "brandColor": "#6754D9",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg"
+  }
+}
