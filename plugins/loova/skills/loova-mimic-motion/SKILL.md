@@ -2,7 +2,7 @@
 name: loova-mimic-motion
 description: "Make a target character perform movement from a reference video with Loova, separating identity, body motion, camera, and environment. Use for reference-motion transfer or motion plans; use source-video identity editing when the original scene must remain unchanged."
 metadata:
-  version: "2.1.0"
+  version: "2.1.1"
   brand: "Loova"
   category: "video-creation"
 ---

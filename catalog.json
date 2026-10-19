@@ -1,11 +1,11 @@
 {
   "name": "Loova Creative Skills",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "language": "en",
   "skill_count": 10,
   "image_skill_count": 5,
   "video_skill_count": 5,
-  "bundle": "loova-creative-skills-2.1.0.zip",
+  "bundle": "loova-creative-skills-2.1.1.zip",
   "skills": [
     {
       "name": "loova-product-photoshoot",
@@ -14,7 +14,7 @@
       "category": "image-creation",
       "scenario": "Product photography and brand campaigns",
       "path": "plugins/loova/skills/loova-product-photoshoot/SKILL.md",
-      "archive": "downloads/loova-product-photoshoot-2.1.0.zip",
+      "archive": "downloads/loova-product-photoshoot-2.1.1.zip",
       "inputs": [
         "Product image or a concept description",
         "Intended use and optional aspect ratio or output count"
@@ -31,7 +31,7 @@
       "category": "image-creation",
       "scenario": "Ecommerce listings and product detail pages",
       "path": "plugins/loova/skills/loova-product-listing-images/SKILL.md",
-      "archive": "downloads/loova-product-listing-images-2.1.0.zip",
+      "archive": "downloads/loova-product-listing-images-2.1.1.zip",
       "inputs": [
         "Product images, SKU details, and verified product facts",
         "Listing destination and requested modules or count"
@@ -49,7 +49,7 @@
       "category": "image-creation",
       "scenario": "Image retouching, background replacement, and restyling",
       "path": "plugins/loova/skills/loova-ai-image-editor/SKILL.md",
-      "archive": "downloads/loova-ai-image-editor-2.1.0.zip",
+      "archive": "downloads/loova-ai-image-editor-2.1.1.zip",
       "inputs": [
         "An accessible source image",
         "Requested edits and protected content"
@@ -66,7 +66,7 @@
       "category": "image-creation",
       "scenario": "Video thumbnails and social publishing",
       "path": "plugins/loova/skills/loova-thumbnail-cover-maker/SKILL.md",
-      "archive": "downloads/loova-thumbnail-cover-maker-2.1.0.zip",
+      "archive": "downloads/loova-thumbnail-cover-maker-2.1.1.zip",
       "inputs": [
         "The real content or topic",
         "Placement, exact copy, and optional identity or brand references"
@@ -83,7 +83,7 @@
       "category": "image-creation",
       "scenario": "Ad placement and multichannel creative adaptation",
       "path": "plugins/loova/skills/loova-ad-resizer/SKILL.md",
-      "archive": "downloads/loova-ad-resizer-2.1.0.zip",
+      "archive": "downloads/loova-ad-resizer-2.1.1.zip",
       "inputs": [
         "An existing creative",
         "Target dimensions or ratios and protected content"
@@ -101,7 +101,7 @@
       "category": "video-creation",
       "scenario": "Reference-led product ads and campaign adaptation",
       "path": "plugins/loova/skills/loova-viral-video-clone/SKILL.md",
-      "archive": "downloads/loova-viral-video-clone-2.1.0.zip",
+      "archive": "downloads/loova-viral-video-clone-2.1.1.zip",
       "inputs": [
         "An accessible reference video",
         "Target product references and facts",
@@ -119,7 +119,7 @@
       "category": "video-creation",
       "scenario": "Product showcases and launch videos",
       "path": "plugins/loova/skills/loova-product-video-maker/SKILL.md",
-      "archive": "downloads/loova-product-video-maker-2.1.0.zip",
+      "archive": "downloads/loova-product-video-maker-2.1.1.zip",
       "inputs": [
         "Product images and available angles",
         "Showcase goal and optional duration, format, and audio requirements"
@@ -136,7 +136,7 @@
       "category": "video-creation",
       "scenario": "Presenter ads, product explanations, and demonstrations",
       "path": "plugins/loova/skills/loova-ugc-ad-creator/SKILL.md",
-      "archive": "downloads/loova-ugc-ad-creator-2.1.0.zip",
+      "archive": "downloads/loova-ugc-ad-creator-2.1.1.zip",
       "inputs": [
         "Product facts, audience, and supported claims",
         "Presenter reference or brief",
@@ -154,7 +154,7 @@
       "category": "video-creation",
       "scenario": "Character replacement and video adaptation",
       "path": "plugins/loova/skills/loova-character-swap/SKILL.md",
-      "archive": "downloads/loova-character-swap-2.1.0.zip",
+      "archive": "downloads/loova-character-swap-2.1.1.zip",
       "inputs": [
         "Accessible source footage",
         "Target character or identity reference",
@@ -172,7 +172,7 @@
       "category": "video-creation",
       "scenario": "Character animation and reference-motion transfer",
       "path": "plugins/loova/skills/loova-mimic-motion/SKILL.md",
-      "archive": "downloads/loova-mimic-motion-2.1.0.zip",
+      "archive": "downloads/loova-mimic-motion-2.1.1.zip",
       "inputs": [
         "Target character reference",
         "An accessible motion reference video",

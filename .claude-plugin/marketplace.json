@@ -10,7 +10,7 @@
     {
       "name": "loova",
       "source": "./plugins/loova",
-      "version": "2.1.0",
+      "version": "2.1.1",
       "description": "Product image and video creation with Loova MCP."
     }
   ]

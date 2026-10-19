@@ -2,7 +2,7 @@
 name: loova-viral-video-clone
 description: "Adapt a reference video into a new product video with Loova, preserving the requested pacing and shot structure while using the user's product. Use for reference-led ad recreation; not for replacing only a person in the original footage."
 metadata:
-  version: "2.1.0"
+  version: "2.1.1"
   brand: "Loova"
   category: "video-creation"
 ---

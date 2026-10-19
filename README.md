@@ -1,6 +1,6 @@
 # Loova Agent Plugins
 
-版本 2.1.0。10 个英文创作 Skills 与 Loova 正式 MCP 的安装包。以产品整理的英文内容为基础，支持 Claude Code、支持插件功能的 Codex，以及可读取 `SKILL.md` 的其他 Agent。英文指令不限制用户或生成内容的语言。
+版本 2.1.1。10 个英文创作 Skills 与 Loova 正式 MCP 的安装包。以产品整理的英文内容为基础，支持 Claude Code、支持插件功能的 Codex，以及可读取 `SKILL.md` 的其他 Agent。英文指令不限制用户或生成内容的语言。
 
 正式 MCP：`https://mcp.loova.ai/mcp`。安装后需要用自己的 Loova 账号完成 OAuth 授权；插件不包含密钥，不授予额外模型权限或免费额度。
 
@@ -115,7 +115,7 @@ bash -n scripts/install.sh
 claude plugin validate plugins/loova
 ```
 
-本包合并产品英文 1.0 与工程插件方案，统一为 2.1.0。`quality/acceptance-cases.json` 是待执行的创作行为验收案例，不是已通过的付费生成测试。发布前检查仓库内容，保持三个插件清单与市场版本一致；更新版本时同步 Skill 元数据及 `catalog.json`。
+本包合并产品英文 1.0 与工程插件方案，统一为 2.1.1。`quality/acceptance-cases.json` 是待执行的创作行为验收案例，不是已通过的付费生成测试。发布前检查仓库内容，保持三个插件清单与市场版本一致；更新版本时同步 Skill 元数据及 `catalog.json`。
 
 旧 `loova-viral-video-remake` 已改为 `loova-viral-video-clone`。已手动安装旧名称的用户，应先将旧目录备份到 Skills 搜索目录外，再移除旧安装并安装新名称，避免重复发现。安装器不会自动删除旧名称或用户自定义内容。
 
@@ -125,7 +125,7 @@ claude plugin validate plugins/loova
 python3 scripts/build_release.py
 ```
 
-输出 `dist/loova-creative-skills-2.1.0/` 网站目录与 `dist/loova-creative-skills-2.1.0-deploy.zip`。网站目录包含完整包、10 个独立包、英文目录、文件清单和 SHA256。插件与 ZIP 都从 `plugins/loova/skills` 读取内容，不维护第二套 Skills。
+输出 `dist/loova-creative-skills-2.1.1/` 网站目录与 `dist/loova-creative-skills-2.1.1-deploy.zip`。网站目录包含完整包、10 个独立包、英文目录、文件清单和 SHA256。插件与 ZIP 都从 `plugins/loova/skills` 读取内容，不维护第二套 Skills。
 
 执行约定为支持独立安装而放在每个 Skill 内；修改时同步全部副本，构建会检查一致性。构建拒绝覆盖已有发布目录，重复检查可用 `--output /path/to/empty-output`。官网部署步骤见 [DEPLOYMENT.md](docs/DEPLOYMENT.md)。
 

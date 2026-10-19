@@ -40,7 +40,11 @@ Character swaps and outfit changes use supported general generation/editing capa
 
 Use a new UUID per intentionally new task. For retries keep tool, model, parameters, prompt, billing preference, full references and UUID unchanged. REQUEST_IN_PROGRESS permits a later identical retry. UPSTREAM_SUBMISSION_UNCERTAIN requires stopping and reporting the uncertainty; never change UUID to force another submission.
 
-Retain returned project/job IDs. Query get_generation_job for generation results and follow poll_after_seconds with bounded polling. If still running, report status and resume later. credits_cost=null means unknown, not zero. Additional variants or repairs need remaining approval and budget; do not loop paid attempts.
+Retain returned project/job IDs. After generation returns a job_id, call show_generation_job(job_ids=[...]) immediately when available; do not wait for completion before opening the card. In a client known to support MCP Apps and card-side tool calls, hand result polling to the card and end the turn with a submitted/pending status. Do not also poll get_generation_job, schedule background checks, or repeatedly reopen cards. The card queries existing jobs only; it cannot create, retry or charge for generation.
+
+Tool success alone does not prove the host rendered a card or supports live updates. If UI support is unknown, say the card was requested and automatic updates depend on client support; do not claim confirmed rendering. If the client is text-only, the card reports live updates unavailable, or the user explicitly requests a status check, use get_generation_job(job_ids=[...]) with poll_after_seconds and bounded polling (at most 3 checks per turn), then report pending status and retain IDs. Never resubmit generation to recover a missing card. Closed/hidden cards may pause updates while backend generation continues; reopen the existing task to resume. Authorization errors require reconnecting, not generation retries.
+
+Card handoff is submission delivery, not completed quality review. Defer output inspection until results are available and the user requests continued review; clearly identify pending inspection or dependent assembly work. credits_cost=null means unknown, not zero. Additional variants or repairs need remaining approval and budget; do not loop paid attempts.
 
 ## Inspect and deliver
 

@@ -2,7 +2,7 @@
 name: loova-ugc-ad-creator
 description: "Create presenter-led product ads with Loova, coordinating a natural script, product demonstration, speech, and supporting shots. Use for UGC-style ads and their scripts; not for a silent product-only showcase or identity replacement."
 metadata:
-  version: "2.1.0"
+  version: "2.1.1"
   brand: "Loova"
   category: "video-creation"
 ---
