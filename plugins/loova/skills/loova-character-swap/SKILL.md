@@ -2,7 +2,7 @@
 name: loova-character-swap
 description: "Replace a specified person or character in source footage using Loova video editing, retaining the agreed scene, motion, camera, timing, and audio. Use for identity replacement in an existing video; not for performing reference motion in a new scene."
 metadata:
-  version: "2.1.1"
+  version: "2.1.3"
   brand: "Loova"
   category: "video-creation"
 ---

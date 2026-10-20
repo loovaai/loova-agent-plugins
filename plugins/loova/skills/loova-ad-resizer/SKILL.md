@@ -2,7 +2,7 @@
 name: loova-ad-resizer
 description: "Adapt an existing product or ad image to requested dimensions and aspect ratios with Loova-compatible editing or deterministic resizing. Preserve product proportions, copy, and required content through containment, cropping, extension, or reflow."
 metadata:
-  version: "2.1.1"
+  version: "2.1.3"
   brand: "Loova"
   category: "image-creation"
 ---

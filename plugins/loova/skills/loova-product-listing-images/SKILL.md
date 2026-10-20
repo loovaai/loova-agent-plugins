@@ -2,7 +2,7 @@
 name: loova-product-listing-images
 description: "Create coordinated product listing images with Loova, including hero, feature, detail, lifestyle, and specification images. Use for ecommerce image sets with consistent SKU facts; not for video or a small edit to a single image."
 metadata:
-  version: "2.1.1"
+  version: "2.1.3"
   brand: "Loova"
   category: "image-creation"
 ---

@@ -2,7 +2,7 @@
 name: loova-thumbnail-cover-maker
 description: "Create or revise video thumbnails and social covers with Loova, using a clear subject, accurate copy, and small-screen readability. Use for cover images or cover concepts; not for generating the video itself."
 metadata:
-  version: "2.1.1"
+  version: "2.1.3"
   brand: "Loova"
   category: "image-creation"
 ---

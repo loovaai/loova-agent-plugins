@@ -2,7 +2,7 @@
 name: loova-ai-image-editor
 description: "Edit a supplied image with Loova, changing specified objects, backgrounds, details, or visual style while preserving the agreed subject and composition. Use for image edits; not for creating an unrelated image or only resizing a layout."
 metadata:
-  version: "2.1.1"
+  version: "2.1.3"
   brand: "Loova"
   category: "image-creation"
 ---

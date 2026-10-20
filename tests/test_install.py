@@ -51,7 +51,7 @@ class InstallTests(unittest.TestCase):
         for manifest in ['plugin.json', '.codex-plugin/plugin.json', '.claude-plugin/plugin.json']:
             data = json.loads((plugin / manifest).read_text())
             self.assertEqual(data['name'], 'loova')
-            self.assertEqual(data['version'], '2.1.1')
+            self.assertEqual(data['version'], '2.1.3')
         for config in ['mcp.json', '.mcp.json']:
             server = json.loads((plugin / config).read_text())['mcpServers']['loova']
             self.assertEqual(server['url'], 'https://mcp.loova.ai/mcp')

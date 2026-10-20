@@ -2,6 +2,16 @@
 
 Read before uploading or generating media. Planning-only requests do not create tasks. Use the authenticated production Loova MCP connection and its live tool schemas; tool names may have a host prefix. Respect the selected model and do not silently switch providers.
 
+## Account switching and connection recovery
+
+When the user switches accounts or completes reauthorization, retain the creative brief but invalidate remembered profile, Credits, model availability and quotes. Use only the selected environment and connection; do not add a duplicate server or fall back to production when testing.
+
+Use the current host's supported connection/account selector, refresh and tool-discovery capabilities when available. Rediscover the selected server's tools after OAuth completes, then make fresh read-only get_profile, get_credits and list_generation_models calls. Compare the stable profile ID with the pre-switch ID when known; balance alone cannot identify an account. Confirm the intended new identity before submitting work. Browser consent or a successful login command alone is not proof that the current chat has adopted the new credentials.
+
+If tools are missing, attempt supported host discovery/reload once before declaring the connection unavailable. If the old profile remains, select the intended account or reconnect that exact connection through the host. Do not repeatedly authorize, restart the whole app by default, or run a separate CLI login expecting it to refresh a desktop/plugin connection. If this host exposes no refresh capability, explain that boundary and give the smallest supported manual connection action; never claim an automatic refresh happened.
+
+After recovery, obtain a fresh quote under the verified account. Do not automatically replay a paid submission or carry an uncertain old-account submission into the new account. Preserve existing task IDs and distinguish pending work from tasks already accepted under the previous account.
+
 ## Prepare references
 
 Assign each asset a role: product identity, character, motion, source footage, scene or style. Preserve locked copy and approved output counts. Inspect accessible assets; if the host cannot view a video but Loova can analyze it, attribute that analysis to Loova rather than claiming direct observation.
@@ -14,7 +24,7 @@ Fresh tasks should use valid reference links. Retrying an accepted task must pre
 
 ## Discover and quote
 
-Use get_profile/get_credits when account checks are needed, and list_generation_models for the user's available models, parameters, defaults and reference_types. Do not invent model codes or fields. Each generation creates one image or video.
+Use get_profile/get_credits when account checks are needed, and list_generation_models for all enabled MCP-supported models, parameters, defaults and reference_types. The catalog is not filtered by your plan; a listed model is not proof of permission to use it. Quotes check access and submission rechecks access and billing. Do not invent model codes or fields. Each generation creates one image or video.
 
 - generate_image uses txt2img without references or img2img with references.
 - generate_video uses txt2vid without references or img2vid with references.
@@ -24,13 +34,21 @@ Use get_profile/get_credits when account checks are needed, and list_generation_
 - reference_video_duration and has_reference_video are quote-only inputs when required by the live schema. Measure or obtain reliable duration; do not guess it or forward quote-only fields to generation.
 - Do not submit provider, pay_type, user_id or task_type. Account authorization and asset upload alone are not spending approval.
 
+## Plan and Credits errors
+
+For PLAN_REQUIRED, explain that current benefits do not permit the model and show error.action.url as a plan link when action.type is upgrade_plan. For INSUFFICIENT_CREDITS, explain the product Credits shortage and show the returned URL as a Credits purchase link when action.type is buy_credits. Read the structured error or its JSON text equivalent. Do not invent URLs when an action is absent, infer exact missing amounts, or request OAuth reauthorization for these business errors.
+
+MODEL_NOT_AVAILABLE, invalid parameters, concurrency limits, content rejection and ambiguous Unlimited failures are not proof that a purchase will help. Preserve the selected model and billing preference; do not silently switch models or fall back from Unlimited to paid generation.
+
+After the user reports a purchase, recheck get_profile/get_credits and obtain a fresh quote, then confirm their intent before continuing paid generation. Never purchase or replay a failed submission automatically. Retain known task IDs, original request UUIDs and uncertain-submission safeguards; a purchase is not permission to duplicate an accepted task.
+
 ## Motion imitation
 
 Discover mode=motion_imitation. Prepare one character image and one motion video. Quote using reference_video_duration and the model's supported parameters. After approval call generate_motion_imitation with model_code, image_url, motion_video_url, parameters, optional prompt and idempotency_key. Execution measures duration under the backend's model rules; do not add an arbitrary output-duration override.
 
 ## Ad video clone
 
-Use create_video_clone_project → get_video_clone_project → quote_video_clone → confirm_video_clone_script. Select a permitted img2vid model and provide the reference video, 1–3 product images and optional avatar image. Model and duration are set during project creation. Analysis has no separate Credits charge and does not start video generation.
+Use create_video_clone_project → get_video_clone_project → quote_video_clone → confirm_video_clone_script. Select an img2vid model from the catalog; the backend checks access. Provide the reference video, 1–3 product images and optional avatar image. Model and duration are set during project creation. Analysis has no separate Credits charge and does not start video generation.
 
 When ready, show the analysis summary, COMPLETE editable script and estimate. Submit the user's approved script and current script_version only after explicit confirmation. Confirmation can adjust only declared options such as resolution and aspect ratio. On SCRIPT_VERSION_CONFLICT retrieve the current script and obtain renewed approval. The backend handles orchestration: do not also submit duplicate per-shot tasks.
 

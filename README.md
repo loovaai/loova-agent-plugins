@@ -1,6 +1,6 @@
 # Loova Agent Plugins
 
-版本 2.1.1。10 个英文创作 Skills 与 Loova 正式 MCP 的安装包。以产品整理的英文内容为基础，支持 Claude Code、支持插件功能的 Codex，以及可读取 `SKILL.md` 的其他 Agent。英文指令不限制用户或生成内容的语言。
+版本 2.1.3。10 个英文创作 Skills 与 Loova 正式 MCP 的安装包。以产品整理的英文内容为基础，支持 Claude Code、支持插件功能的 Codex，以及可读取 `SKILL.md` 的其他 Agent。英文指令不限制用户或生成内容的语言。
 
 正式 MCP：`https://mcp.loova.ai/mcp`。安装后需要用自己的 Loova 账号完成 OAuth 授权；插件不包含密钥，不授予额外模型权限或免费额度。
 
@@ -101,9 +101,17 @@ Claude 网页 Connector 或 ChatGPT 的 MCP 连接不会自动读取电脑中的
 
 本地素材通过上传会话直传；无法读取文件的客户端使用网页上传链接。动作模仿与广告复刻调用专用工具。Unlimited 按实时资格报价，不自动回退 Credits。重试保留原 UUID 和完整请求。
 
+2.1.3 的模型目录展示所有已启用且 MCP 支持的模型，不代表当前账号拥有使用权限。报价与创建时校验权限；`PLAN_REQUIRED` 展示后端返回的套餐入口，`INSUFFICIENT_CREDITS` 展示积分单购入口。链接随环境配置生成，Agent 不猜测地址，也不通过重新授权解决购买问题。用户购买后需重新查询账号、获取报价并确认继续生成，不自动购买或回放任务。
+
 ## 更新与卸载
 
 本地市场先 `git pull --ff-only`，再使用客户端插件管理界面更新 Loova；远程市场使用客户端的市场刷新与插件更新入口。单独 Skills 更新重新运行安装器并加 `--update`。
+
+### 切换授权账号
+
+2.1.3 的执行流程会在重新授权后优先使用宿主支持的连接刷新和工具发现能力，再实时查询账号、Credits 和模型。必须核对目标账号，不能根据旧聊天里的余额判断切换成功，也不默认要求重启整个应用。
+
+连接刷新由宿主提供，Skills 本身不能替换桌面应用的 OAuth 事件处理器。浏览器授权完成后若仍选中旧账号，需要在同一个宿主连接中切换账号；单独运行 CLI 登录不会保证刷新桌面插件。宿主没有开放刷新能力时，Agent 应明确说明限制，并给出该客户端支持的最小操作。
 
 插件卸载使用客户端插件管理界面。独立 Skills 卸载只移除本次安装的 10 个 `loova-*` 目录（名称见上表），不要删除整个 Skills 目录。卸载文件不等于撤销 OAuth；停止授权可在 Loova 账户 Connected agents 撤销对应连接。
 
@@ -115,7 +123,7 @@ bash -n scripts/install.sh
 claude plugin validate plugins/loova
 ```
 
-本包合并产品英文 1.0 与工程插件方案，统一为 2.1.1。`quality/acceptance-cases.json` 是待执行的创作行为验收案例，不是已通过的付费生成测试。发布前检查仓库内容，保持三个插件清单与市场版本一致；更新版本时同步 Skill 元数据及 `catalog.json`。
+本包合并产品英文 1.0 与工程插件方案，统一为 2.1.3。`quality/acceptance-cases.json` 是待执行的创作行为验收案例，不是已通过的付费生成测试。发布前检查仓库内容，保持三个插件清单与市场版本一致；更新版本时同步 Skill 元数据及 `catalog.json`。
 
 旧 `loova-viral-video-remake` 已改为 `loova-viral-video-clone`。已手动安装旧名称的用户，应先将旧目录备份到 Skills 搜索目录外，再移除旧安装并安装新名称，避免重复发现。安装器不会自动删除旧名称或用户自定义内容。
 
@@ -125,7 +133,7 @@ claude plugin validate plugins/loova
 python3 scripts/build_release.py
 ```
 
-输出 `dist/loova-creative-skills-2.1.1/` 网站目录与 `dist/loova-creative-skills-2.1.1-deploy.zip`。网站目录包含完整包、10 个独立包、英文目录、文件清单和 SHA256。插件与 ZIP 都从 `plugins/loova/skills` 读取内容，不维护第二套 Skills。
+输出 `dist/loova-creative-skills-2.1.3/` 网站目录与 `dist/loova-creative-skills-2.1.3-deploy.zip`。网站目录包含完整包、10 个独立包、英文目录、文件清单和 SHA256。插件与 ZIP 都从 `plugins/loova/skills` 读取内容，不维护第二套 Skills。
 
 执行约定为支持独立安装而放在每个 Skill 内；修改时同步全部副本，构建会检查一致性。构建拒绝覆盖已有发布目录，重复检查可用 `--output /path/to/empty-output`。官网部署步骤见 [DEPLOYMENT.md](docs/DEPLOYMENT.md)。
 
