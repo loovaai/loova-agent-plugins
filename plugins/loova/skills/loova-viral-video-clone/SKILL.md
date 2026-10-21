@@ -2,7 +2,7 @@
 name: loova-viral-video-clone
 description: "Adapt a reference video into a new product video with Loova, preserving the requested pacing and shot structure while using the user's product. Use for reference-led ad recreation; not for replacing only a person in the original footage."
 metadata:
-  version: "2.1.3"
+  version: "2.1.4"
   brand: "Loova"
   category: "video-creation"
 ---
@@ -30,6 +30,6 @@ Establish which elements the user wants to follow. Do not import the original br
 
 For multi-shot work, reuse product references and accepted shots, then assemble only with supported tools. A request for one clip must not become an unrequested campaign package.
 
-Check that actions belong to the new product, product state remains coherent across cuts, approved claims have factual support, and the original identity or branding has not leaked through. Inspect actual timing and audio endings. Repair the specific identity, action, or cut problem within the approved budget.
+Check that actions belong to the new product, product state remains coherent across cuts, approved claims have factual support, and the original identity or branding has not leaked through. Inspect actual timing and audio endings. Repair the specific identity, action, or cut problem only when requested, following the selected progression mode.
 
 Deliver the requested adaptation plan, prompts, or finished video and briefly identify the main adaptations. For example, coffee-pouring beats can become a lamp's switch-on and illumination sequence; do not make a lamp perform the reference product's physical actions.

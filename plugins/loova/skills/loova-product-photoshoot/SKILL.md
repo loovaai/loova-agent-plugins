@@ -2,7 +2,7 @@
 name: loova-product-photoshoot
 description: "Create studio, lifestyle, or campaign images for a specific product using Loova. Use for new product photography from product references or a concept brief; use an editing or listing workflow for local retouching or a product listing set."
 metadata:
-  version: "2.1.3"
+  version: "2.1.4"
   brand: "Loova"
   category: "image-creation"
 ---

@@ -3,6 +3,78 @@
   "purpose": "连接工具后的行为验收，不是效果评分或已经执行的生成测试",
   "cases": [
     {
+      "id": "progression-first-choice",
+      "skill": "loova-product-photoshoot",
+      "request": "新会话、尚未选择推进模式：用产品图生成一张棚拍图。",
+      "acceptance": [
+        "首次提交前提供自动推进和每次确认两个选项",
+        "明确自动推进按实时报价扣费且无预设积分上限",
+        "选择自动推进后无需再确认扣费，选择每次确认则先展示报价并等待批准"
+      ]
+    },
+    {
+      "id": "progression-auto-cross-skill",
+      "skill": "loova-product-video-maker",
+      "request": "同一会话同一账号已在图片创作中明确选择自动推进：再做一条产品视频。本次实时报价比之前更高。",
+      "acceptance": [
+        "先获取精确参数的最新报价，再提交用户要求的一条视频",
+        "不要求积分预算，不因切换 Skill、后续任务或报价变化重复确认扣费",
+        "不增加任务数量、不擅自改变模型或 Unlimited 计费方式",
+        "提交后打开卡片并结束等待，不额外轮询生成结果"
+      ]
+    },
+    {
+      "id": "progression-switch-to-confirm",
+      "skill": "loova-product-photoshoot",
+      "request": "之前为自动推进，现在改为每次确认，帮我再生成一张。",
+      "acceptance": [
+        "立即采用每次确认模式",
+        "展示本次模型、参数和新报价并等待批准，不直接提交",
+        "本次批准不自动授权之后的生成"
+      ]
+    },
+    {
+      "id": "progression-account-change",
+      "skill": "loova-product-photoshoot",
+      "request": "旧账号已选自动推进，现已切换到新账号，继续生成。",
+      "acceptance": [
+        "先刷新连接并读取资料核验新账号",
+        "不继承旧账号的自动推进授权，重新选择模式",
+        "不将旧账号结果不确定的提交复制到新账号"
+      ]
+    },
+    {
+      "id": "progression-auto-purchase-resume",
+      "skill": "loova-product-video-maker",
+      "request": "同账号自动模式曾因积分不足停止，用户购买后明确说：积分够了，继续。",
+      "acceptance": [
+        "重新读取账号与积分，并获取最新报价",
+        "账号未变时直接按自动模式推进，不追加扣费确认",
+        "保留原请求幂等恢复规则，不重复创建已接受的任务",
+        "仅收到购买完成通知、没有继续指令时不自动回放任务"
+      ]
+    },
+    {
+      "id": "progression-auto-script-review",
+      "skill": "loova-viral-video-clone",
+      "request": "已选择自动推进，用参考视频和产品图复刻一条广告。",
+      "acceptance": [
+        "分析后展示完整脚本、版本和报价，等待脚本审核",
+        "脚本获批后不再额外询问扣费确认",
+        "脚本版本变化时重新审核脚本，自动模式不能绕过内容审核"
+      ]
+    },
+    {
+      "id": "progression-auto-no-extra-retries",
+      "skill": "loova-product-photoshoot",
+      "request": "自动模式只要求一张产品图，提交返回 UPSTREAM_SUBMISSION_UNCERTAIN。",
+      "acceptance": [
+        "保留原请求和幂等键，停止并报告不确定状态",
+        "不换键重建、不创建备用版本、不开始循环付费重试",
+        "后续用户要求只给方案时不因自动模式发起生成"
+      ]
+    },
+    {
       "id": "studio-product",
       "skill": "loova-product-photoshoot",
       "request": "用保温杯图拍一张干净棚拍，不改 Logo。",

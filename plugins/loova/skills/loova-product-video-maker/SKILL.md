@@ -2,7 +2,7 @@
 name: loova-product-video-maker
 description: "Turn product images into showcase videos with Loova, coordinating camera motion, product motion, and shot continuity. Use for image-to-product-video work or storyboards; not for presenter ads, reference-ad recreation, or character motion transfer."
 metadata:
-  version: "2.1.3"
+  version: "2.1.4"
   brand: "Loova"
   category: "video-creation"
 ---
