@@ -11,11 +11,28 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Loova",
-    "shortDescription": "Product images and videos with Loova",
+    "shortDescription": "Create product images & videos",
+    "longDescription": "Loova helps creators, marketers, and ecommerce teams create and edit product images and videos. Its ten creative workflows cover product photoshoots, listing images, image editing, ad resizing, thumbnails, product videos, UGC ads, reference-video adaptation, character replacement, and motion transfer. Connect a Loova account to browse supported models, check credits, get quotes, submit generation tasks, and view results. Reference media must be uploaded to Loova before use. Available models, features, and billing depend on the connected account and current model capabilities. Generation may consume Loova credits or require a paid plan. Choose per-generation confirmation or explicitly authorize automatic progression for the current conversation and account. Generated results may require review and refinement.",
     "developerName": "Loova",
     "category": "Creativity",
+    "capabilities": [
+      "Generate and edit images",
+      "Generate and adapt videos",
+      "Prepare product and advertising creative",
+      "Check models, credits, and quotes",
+      "View generation status and results"
+    ],
+    "websiteURL": "https://loova.ai",
+    "supportURL": "https://loova.ai",
+    "privacyPolicyURL": "https://loova.ai/privacy-policy",
+    "termsOfServiceURL": "https://loova.ai/terms-of-use",
+    "defaultPrompt": [
+      "Create studio product photos from my reference image. Show me the settings and quote first.",
+      "Turn my product photo into a short showcase video.",
+      "Adapt my reference ad into a video for my product."
+    ],
     "brandColor": "#6754D9",
-    "composerIcon": "./assets/icon.svg",
-    "logo": "./assets/icon.svg"
+    "composerIcon": "./assets/icon.webp",
+    "logo": "./assets/icon.webp"
   }
 }

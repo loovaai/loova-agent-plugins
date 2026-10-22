@@ -153,3 +153,17 @@ python3 scripts/build_release.py
 执行约定为支持独立安装而放在每个 Skill 内；修改时同步全部副本，构建会检查一致性。构建拒绝覆盖已有发布目录，重复检查可用 `--output /path/to/empty-output`。官网部署步骤见 [DEPLOYMENT.md](docs/DEPLOYMENT.md)。
 
 格式依据：[OpenAI 插件文档](https://developers.openai.com/plugins/build/plugins)、[Claude Code 插件文档](https://code.claude.com/docs/en/plugins-reference)。本地检查不替代各客户端真实安装和 OAuth 验收。
+
+## 构建 OpenAI 上架上传包
+
+```bash
+python3 scripts/build_release.py --openai
+```
+
+输出 `dist/loova-openai-2.1.4.zip`，与官网 skills 分发包分开。ZIP 根目录包含 portable `plugin.json`、正式环境 `mcp.json`、现有图标及全部 10 个 skills；构建时将 Codex 清单中的 `interface` 合入 portable 清单，不包含本地市场、测试配置、凭据或 hooks。
+
+在 OpenAI Plugins 发布后台选择 **With MCP** 上传此包。技术名称为 `loova`，须与已注册插件名称匹配；若 2.1.4 已发布，需要先同步升级仓库的版本声明。上传后的域名验证、OAuth 连接、工具与 skills 扫描、审核和发布仍在后台完成。
+
+本次沿用仓库现有图标与 `Creativity` 分类，提交前核对后台是否提供此分类。`supportURL` 暂用包含支持 FAQ 和联系邮箱的官网首页；正式审核前建议改为独立 HTTPS 客服页面。隐私和条款分别使用 `/privacy-policy`、`/terms-of-use`。发布主体以后台已验证身份为准。
+
+该包未伪造演示录像、审核账号或验收结果。首次 MCP 审核所需的演示录像、5 个正向与 3 个反向案例、必要的审核访问方式需要另行补齐；本地打包成功不代表已通过平台审核。

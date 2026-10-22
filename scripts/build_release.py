@@ -98,13 +98,44 @@ def build(output):
     return destination, deploy
 
 
+def openai_package_files():
+    """复用同一套 skills，生成只含一个插件根目录的 OpenAI 上传包。"""
+    _, release = release_files()
+    plugin = ROOT / 'plugins/loova'
+    manifest = json.loads((plugin / 'plugin.json').read_text())
+    overlay = json.loads((plugin / '.codex-plugin/plugin.json').read_text())
+    # 上传包使用 portable 格式，将现有 Codex 展示信息放入官方扩展位置。
+    manifest.setdefault('extensions', {}).setdefault('com.openai', {})['interface'] = overlay['interface']
+    files = {path: data for path, data in release.items() if path.startswith('skills/')}
+    files['plugin.json'] = encode_json(manifest)
+    files['mcp.json'] = (plugin / 'mcp.json').read_bytes()
+    files['assets/icon.webp'] = (plugin / 'assets/icon.webp').read_bytes()
+    return manifest['version'], files
+
+
+def build_openai(output):
+    version, files = openai_package_files()
+    output = Path(output).resolve()
+    output.mkdir(parents=True, exist_ok=True)
+    destination = output / f'loova-openai-{version}.zip'
+    # 不覆盖已交付的上传包，修订时使用新的输出目录。
+    with destination.open('xb') as handle:
+        handle.write(archive(files))
+    return destination
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=ROOT / 'dist')
+    parser.add_argument('--openai', action='store_true', help='Build the complete OpenAI plugin upload ZIP')
     args = parser.parse_args()
     try:
-        directory, bundle = build(args.output)
+        if args.openai:
+            bundle = build_openai(args.output)
+        else:
+            directory, bundle = build(args.output)
     except (OSError, ValueError) as exc:
         parser.exit(1, f'Build failed: {exc}\n')
-    print(f'Website directory: {directory}')
-    print(f'Deployment archive: {bundle}')
+    if not args.openai:
+        print(f'Website directory: {directory}')
+    print(f'Archive: {bundle}')
